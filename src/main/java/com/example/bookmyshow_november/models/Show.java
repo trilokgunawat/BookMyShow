@@ -1,9 +1,6 @@
 package com.example.bookmyshow_november.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,4 +18,7 @@ public class Show extends BaseModel{
     private Movie movie;
     @Enumerated(EnumType.ORDINAL)
     private Language language;
+    @ManyToOne
+//    @JoinColumn(name = )
+    private City city;
 }

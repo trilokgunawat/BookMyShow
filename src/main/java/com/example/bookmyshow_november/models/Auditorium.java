@@ -15,6 +15,8 @@ public class Auditorium extends BaseModel{
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> features;
-
+    @ManyToOne
+//    @JoinColumn(name = "theatre_id")
+    private Theatre theatre;
 
 }

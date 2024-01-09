@@ -99,7 +99,7 @@ public class TicketService {
             if ( showSeat.getStatus().equals(ShowSeatStatus.Booked)  ) {
                 throw new NotFoundException("Select some other seats combination");
             }if( showSeat.getStatus().equals(ShowSeatStatus.Locked) &&
-                    ( (new Date().getTime() -  showSeat.getLockedAt().getTime())/60 < 15  )){
+                    ( (new Date().getTime() -  showSeat.getLockedAt().getTime())/60 < 5  )){
                 throw new NotFoundException("Select some other seats combination");
             }
         }
